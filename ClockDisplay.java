@@ -52,6 +52,7 @@ public class ClockDisplay
         if(minutes.getValue() == 0) {  // it just rolled over!
             hours.increment();
         }
+        fakeTime = hours.getValue() - 12;
         updateDisplay();
     }
 
@@ -85,7 +86,7 @@ public class ClockDisplay
      */
     private void updateDisplay()
     {
-        if (hours.getValue() >= 12)
+        if (hours.getValue() > 12)
         {
             
             displayString = fakeTime + ":" + 
