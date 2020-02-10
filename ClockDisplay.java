@@ -17,7 +17,8 @@ public class ClockDisplay
     private NumberDisplay hours;
     private NumberDisplay minutes;
     private String displayString;    // simulates the actual display
-    
+    private boolean am;
+    private int fakeTime;
     /**
      * Constructor for ClockDisplay objects. This constructor 
      * creates a new clock set at 00:00.
@@ -60,6 +61,12 @@ public class ClockDisplay
      */
     public void setTime(int hour, int minute)
     {
+        if (hour >= 12)
+        {
+            fakeTime = hour - 12;
+        }
+        
+        
         hours.setValue(hour);
         minutes.setValue(minute);
         updateDisplay();
@@ -78,7 +85,21 @@ public class ClockDisplay
      */
     private void updateDisplay()
     {
-        displayString = hours.getDisplayValue() + ":" + 
+        if (hours.getValue() >= 12)
+        {
+            
+            displayString = fakeTime + ":" + 
                         minutes.getDisplayValue();
+        }
+        else
+        {
+            displayString = hours.getDisplayValue() + ":" + 
+                        minutes.getDisplayValue();
+        }
+        
+        
+        
+        
+        
     }
 }
