@@ -21,4 +21,6 @@ comment6.target=void\ updateDisplay()
 comment6.text=\r\n\ Update\ the\ internal\ string\ that\ represents\ the\ display.\r\n
 comment7.params=
 comment7.target=java.lang.String\ morning()
-numComments=8
+comment8.params=
+comment8.target=void\ hourTick()
+numComments=9
