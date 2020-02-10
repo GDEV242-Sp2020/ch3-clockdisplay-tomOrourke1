@@ -66,11 +66,11 @@ public class ClockDisplay
      */
     public void setTime(int hour, int minute)
     {
+        if(hour == 12)
+            hours.setValue(0);
+        else
+            hours.setValue(hour);
         
-        
-        
-        
-        hours.setValue(hour);
         minutes.setValue(minute);
         updateDisplay();
     }
