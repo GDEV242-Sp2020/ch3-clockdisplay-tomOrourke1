@@ -88,19 +88,19 @@ public class ClockDisplay
     {
         if (hours.getValue() > 12)
         {
-            am = false;
+            
             displayString = fakeTime + ":" + 
                         minutes.getDisplayValue() + morning();
         }
         else if (hours.getValue() == 0)
         {
-            am = true;
+            
             displayString = "12:" + 
                         minutes.getDisplayValue() + morning();
         }
         else
         {
-            am = true;
+            
             displayString = hours.getDisplayValue() + ":" + 
                         minutes.getDisplayValue() + morning();
         }
