@@ -51,6 +51,15 @@ public class ClockDisplay
         minutes.increment();
         if(minutes.getValue() == 0) {  // it just rolled over!
             hours.increment();
+            if (hours.getValue() >= 12)
+            {
+                notAm();
+            }
+            else
+            {
+                notAm();
+            }
+            
         }
         fakeTime = hours.getValue() - 12;
         updateDisplay();
@@ -112,6 +121,10 @@ public class ClockDisplay
         if(am)
             return " AM";
         return " PM";
+    }
+    private void notAm()
+    {
+        am = !am;
     }
     
 }
