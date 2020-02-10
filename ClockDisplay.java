@@ -53,11 +53,11 @@ public class ClockDisplay
             hours.increment();
             if (hours.getValue() >= 12)
             {
-                notAm();
+                am = false;
             }
             else
             {
-                notAm();
+                am = true;
             }
             
         }
@@ -116,15 +116,17 @@ public class ClockDisplay
         
         
     }
+    
     private String morning()
     {
         if(am)
             return " AM";
         return " PM";
     }
+    /**
     private void notAm()
     {
         am = !am;
     }
-    
+    */
 }
