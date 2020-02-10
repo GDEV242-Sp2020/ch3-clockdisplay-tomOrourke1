@@ -126,10 +126,5 @@ public class ClockDisplay
             return " AM";
         return " PM";
     }
-    /**
-    private void notAm()
-    {
-        am = !am;
-    }
-    */
+    
 }
