@@ -91,8 +91,14 @@ public class ClockDisplay
             displayString = fakeTime + ":" + 
                         minutes.getDisplayValue();
         }
+        else if (hours.getValue() == 0)
+        {
+            displayString = "12:" + 
+                        minutes.getDisplayValue();
+        }
         else
         {
+            
             displayString = hours.getDisplayValue() + ":" + 
                         minutes.getDisplayValue();
         }
