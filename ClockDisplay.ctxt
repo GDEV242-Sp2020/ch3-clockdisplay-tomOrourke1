@@ -19,4 +19,6 @@ comment5.text=\r\n\ Return\ the\ current\ time\ of\ this\ display\ in\ the\ form
 comment6.params=
 comment6.target=void\ updateDisplay()
 comment6.text=\r\n\ Update\ the\ internal\ string\ that\ represents\ the\ display.\r\n
-numComments=7
+comment7.params=
+comment7.target=java.lang.String\ morning()
+numComments=8
