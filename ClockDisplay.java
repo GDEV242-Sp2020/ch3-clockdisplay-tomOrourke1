@@ -32,7 +32,7 @@ public class ClockDisplay
         hours = new NumberDisplay(12);
         minutes = new NumberDisplay(60);
         updateDisplay();
-        
+        am = true;
     }
 
     /**
@@ -45,6 +45,7 @@ public class ClockDisplay
         hours = new NumberDisplay(12);
         minutes = new NumberDisplay(60);
         setTime(hour, minute);
+        am = false;
     }
 
     /**
@@ -56,6 +57,8 @@ public class ClockDisplay
         minutes.increment();
         if(minutes.getValue() == 0) {  // it just rolled over!
             hours.increment();
+            if (hours.getValue() == 0 )
+                am = !am;
         }
         updateDisplay();
     }
@@ -91,14 +94,21 @@ public class ClockDisplay
         
         if (hours.getValue() == 0)
         {
-            displayString = "12:" + minutes.getDisplayValue();
+            displayString = "12:" + minutes.getDisplayValue() + morning();
         }
         else
         {
             displayString = hours.getDisplayValue() + ":" + 
-                        minutes.getDisplayValue();
+                        minutes.getDisplayValue() + morning();
         }
         
         
     }
+    private String morning()
+    {
+        if (am)
+            return "AM";
+        return "PM";
+    }
+    
 }
