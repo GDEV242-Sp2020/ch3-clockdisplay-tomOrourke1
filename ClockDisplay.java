@@ -14,7 +14,10 @@
  * 
  * This clock will now be a 12 hour clock
  * 
- * 
+ * I don't know if this is in the right spot but I will answer ther wuestion from the book for the clock display here
+ * I'd say the easier one to make was the 12 hour internal clock
+ * I think the beter one would be the 12 hour internal because 
+ *          it will be the time inside that it is displaying
  * 
  */
 public class ClockDisplay
