@@ -13,7 +13,7 @@
  * @version 2011.07.31
  * 
  * 
- * im pretty sure it is now a functional 24 to 12 hour clock???
+ * functional 24 to 12 hour clock!
  */
 public class ClockDisplay
 {
