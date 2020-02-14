@@ -30,6 +30,7 @@ public class ClockDisplay
     {
         hours = new NumberDisplay(24);
         minutes = new NumberDisplay(60);
+        am = true;
         updateDisplay();
     }
 
@@ -77,8 +78,12 @@ public class ClockDisplay
         if (hour >= 12)
         {
             fakeTime = hour - 12;
+            am = false;
         }
-        
+        else
+        {
+            am = true;
+        }
         
         hours.setValue(hour);
         minutes.setValue(minute);
